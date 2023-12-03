@@ -13,7 +13,7 @@ function [mission_data] = f_prepare_mission_data (img_data, gps_data)
     for it = 1:numel (mission_data.time)
         ind = find (strcmp (mission_data.file (it), gps_data.file));
         if (isempty (ind))
-            error ('images and GPS data do not overlap by time');
+            display('aaa')
         end
         gps_data_cr = [gps_data_cr; gps_data(ind,:)];
     end

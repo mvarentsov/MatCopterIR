@@ -4,10 +4,10 @@ function f_process_IR (IMAGE_DIR_PATH)
     libpath = fileparts (mfilename('fullpath'));
     addpath ([libpath, '\libs\plot_google_map\']);
     addpath ([libpath, '\libs\tight_subplot\']);
-
+    addpath ([libpath, '\libs\Colormaps\']);
 
     IMAGE_FORMAT  = '.jpg';
-    EXIFTOOL_PATH = 'exiftool.exe';
+    EXIFTOOL_PATH = [libpath, '\exiftool.exe'];
     T_MATRIX_SIZE = [256 336];
     
     RELOAD_IR_IMAGES = false;

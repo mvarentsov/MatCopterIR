@@ -141,14 +141,13 @@ function [mission] = f_link_IR2GPS (root_dir, mission, AERROR, SHOW_PREVIEW)
             
             
             [~, fname] = fileparts (file_list(i_file).name);
-            %ir_name(k, 1) = convertCharsToStrings([erase(file_list(i_file).name, '.jpg') '_t.png']);
-            ir_name(k, 1) = {[fname, '_t', '.png']};
-            ir_lat(k, 1) = cur_lat;
-            ir_lon(k, 1) = cur_lon;
-            ir_height(k, 1) = cur_height;
-            ir_yaw(k, 1) = cur_yaw;
-            ir_roll(k, 1) = cur_roll;
-            ir_pitch(k, 1) = cur_pitch;
+            ir_name(k, 1)    = {[fname, '_t', '.png']};
+            ir_lat(k, 1)     = cur_lat;
+            ir_lon(k, 1)     = cur_lon;
+            ir_height(k, 1)  = cur_height;
+            ir_yaw(k, 1)     = cur_yaw;
+            ir_roll(k, 1)    = cur_roll;
+            ir_pitch(k, 1)   = cur_pitch;
             k = k + 1;
         end
     end

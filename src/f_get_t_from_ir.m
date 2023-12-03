@@ -1,5 +1,5 @@
 function [data, exifval] = f_get_t_from_ir(exiftoolpath, impath, filename, i)
-    [waste, exif_text] = system([exiftoolpath ' -flir:all ' '"' impath filename '"']);
+    [waste, exif_text] = system(['"', exiftoolpath '" -flir:all ' '"' impath filename '"']);
     raw_exif = split(exif_text, {': ', char(10)});
     
     for j = 1:floor(length(raw_exif) / 2)
@@ -12,7 +12,7 @@ function [data, exifval] = f_get_t_from_ir(exiftoolpath, impath, filename, i)
     clear j val name a b c
     
     rawpath = [impath 'raw' num2str(i) '.tif'];
-    cmd = [exiftoolpath ' ' '"' impath filename '"' ' -b -RawThermalImage > "' rawpath '"'];
+    cmd = ['"', exiftoolpath '"', ' ' '"' impath filename '"' ' -b -RawThermalImage > "' rawpath '"'];
     %cmd = [exiftoolpath ' ' '''' impath filename '''' ' -b -RawThermalImage > ''' rawpath ''''];
     system(cmd);
     raw = imread(rawpath);
