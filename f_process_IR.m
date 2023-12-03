@@ -295,7 +295,7 @@ function f_process_IR (IMAGE_DIR_PATH)
         img_data.t_corr3 (:, :, it) = img_data.t_raw (:, :, it) + t3_corr (it);
     end
     
-    vars2export = {'t_corr2', 't_corr3'}; %{'t_raw', 't_corr2', 't_corr3'}; %
+    vars2export = {'t_raw', 't_corr2', 't_corr3'}; %
     
     for i_v = 1:numel (vars2export)
         cur_var = vars2export {i_v};
