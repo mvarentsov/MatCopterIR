@@ -2,7 +2,7 @@
 
 MatCopterIR is a library for preprocessing of aerial IR images made from the drone in scanning mode before merging them to orthomosaics. 
 
-Current version is developed for FLIR Tau 2 thermal camera and Mavic 2 Zoom quadcopter operated by [Air-Sea Interaction Laboratory of A.M. Obukhov Institute of Atmospheric Physics](http://ifaran.ru/ras/view/department/general.html?id=5374&locale=en).
+Current version supports data derived with FLIR Tau 2 thermal camera and Mavic 2 Zoom quadcopter operated by [Air-Sea Interaction Laboratory of A.M. Obukhov Institute of Atmospheric Physics](http://ifaran.ru/ras/view/department/general.html?id=5374&locale=en).
  
 ## Requirements 
 
